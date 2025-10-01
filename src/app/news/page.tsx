@@ -176,7 +176,7 @@ export default function NewsPage() {
     triggerOnce: true,
   })
 
-  const formatDate = (dateString) => {
+  const formatDate = (dateString: string): string => {
     const date = new Date(dateString)
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -185,7 +185,7 @@ export default function NewsPage() {
     })
   }
 
-  const formatViews = (views) => {
+  const formatViews = (views: number): string => {
     if (views >= 1000) {
       return `${(views / 1000).toFixed(1)}K`
     }

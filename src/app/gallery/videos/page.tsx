@@ -22,6 +22,22 @@ import {
   Pause
 } from 'lucide-react'
 
+interface VideoItem {
+  id: number
+  title: string
+  description: string
+  category: string
+  duration: string
+  views: number
+  likes: number
+  date: string
+  location: string
+  thumbnail: string
+  videoUrl: string
+  tags: string[]
+  featured?: boolean
+}
+
 const videoCategories = [
   { name: 'All Videos', count: 24, active: true },
   { name: 'Events', count: 8, active: false },
@@ -208,21 +224,21 @@ export default function GalleryVideosPage() {
     triggerOnce: true,
   })
 
-  const [selectedVideo, setSelectedVideo] = useState(null)
-  const [searchTerm, setSearchTerm] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('All Videos')
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null)
+  const [searchTerm, setSearchTerm] = useState<string>('')
+  const [selectedCategory, setSelectedCategory] = useState<string>('All Videos')
+  const [isPlaying, setIsPlaying] = useState<boolean>(false)
 
   // Filter videos based on search term and category
-  const filteredVideos = galleryVideos.filter(video => {
+  const filteredVideos = galleryVideos.filter((video: VideoItem) => {
     const matchesSearch = video.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          video.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         video.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+                         video.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     const matchesCategory = selectedCategory === 'All Videos' || video.category === selectedCategory
     return matchesSearch && matchesCategory
   })
 
-  const openVideo = (video) => {
+  const openVideo = (video: VideoItem) => {
     setSelectedVideo(video)
     setIsPlaying(false)
   }
@@ -232,11 +248,11 @@ export default function GalleryVideosPage() {
     setIsPlaying(false)
   }
 
-  const formatDuration = (duration) => {
+  const formatDuration = (duration: string): string => {
     return duration
   }
 
-  const formatViews = (views) => {
+  const formatViews = (views: number): string => {
     if (views >= 1000) {
       return `${(views / 1000).toFixed(1)}K`
     }

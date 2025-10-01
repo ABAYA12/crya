@@ -19,6 +19,20 @@ import {
   X
 } from 'lucide-react'
 
+interface Photo {
+  id: number
+  title: string
+  description: string
+  category: string
+  date: string
+  location: string
+  photographer: string
+  likes: number
+  views: number
+  tags: string[]
+  image: string
+}
+
 const photoCategories = [
   { name: 'All Photos', count: 48, active: true },
   { name: 'Events', count: 18, active: false },
@@ -192,21 +206,21 @@ export default function GalleryPhotosPage() {
     triggerOnce: true,
   })
 
-  const [selectedPhoto, setSelectedPhoto] = useState(null)
-  const [viewMode, setViewMode] = useState('grid') // 'grid' or 'list'
-  const [searchTerm, setSearchTerm] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('All Photos')
+  const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null)
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
+  const [searchTerm, setSearchTerm] = useState<string>('')
+  const [selectedCategory, setSelectedCategory] = useState<string>('All Photos')
 
   // Filter photos based on search term and category
-  const filteredPhotos = galleryPhotos.filter(photo => {
+  const filteredPhotos = galleryPhotos.filter((photo: Photo) => {
     const matchesSearch = photo.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          photo.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         photo.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+                         photo.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     const matchesCategory = selectedCategory === 'All Photos' || photo.category === selectedCategory
     return matchesSearch && matchesCategory
   })
 
-  const openPhoto = (photo) => {
+  const openPhoto = (photo: Photo) => {
     setSelectedPhoto(photo)
   }
 
