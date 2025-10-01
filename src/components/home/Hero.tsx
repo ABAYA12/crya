@@ -76,7 +76,7 @@ export default function Hero() {
                 src={slide.image}
                 alt={slide.title}
                 fill
-                className="object-cover"
+                className="object-cover blur-sm"
                 priority={index === 0}
                 sizes="100vw"
               />
