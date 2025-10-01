@@ -12,7 +12,7 @@ const heroSlides = [
     title: "Raising Voices, Shaping Africa's Future",
     subtitle: "Empowering African Youth for Governance and Democracy",
     description: "Join us in building a united, empowered, and visionary generation of young Africans driven by education, hope, patriotism, and purposeful engagement.",
-    image: "/images/hero-1.jpg",
+    image: "/cryalogo.jpg",
     cta: "Join Our Movement",
     ctaLink: "/get-involved/join",
     stats: { label: "Youth Empowered", value: "5,000+" }
@@ -22,7 +22,7 @@ const heroSlides = [
     title: "Education as Empowerment",
     subtitle: "Actualizing the African Dream Through Learning",
     description: "We believe education is the cornerstone of empowerment. Through our programs, we're building a generation ready to lead Africa into prosperity.",
-    image: "/images/hero-2.jpg",
+    image: "/cryalogo.jpg",
     cta: "Explore Programs",
     ctaLink: "/programs",
     stats: { label: "Schools Reached", value: "150+" }
@@ -32,7 +32,7 @@ const heroSlides = [
     title: "Mental Health & Anti-Drug Campaign",
     subtitle: "Supporting Healthy Communities",
     description: "Our ongoing campaigns in Senior High Schools across Ghana are making real impact in fighting drug abuse and promoting mental wellness.",
-    image: "/images/hero-3.jpg",
+    image: "/cryalogo.jpg",
     cta: "Learn More",
     ctaLink: "/programs/anti-drug",
     stats: { label: "Students Impacted", value: "10,000+" }
@@ -100,11 +100,31 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-8"
             >
+              {/* CRYA Logo */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex items-center gap-4 mb-4"
+              >
+                <Image
+                  src="/cryalogo.jpg"
+                  alt="CRYA Logo"
+                  width={80}
+                  height={80}
+                  className="rounded-full border-4 border-white/20 shadow-2xl"
+                />
+                <div>
+                  <h2 className="text-2xl font-bold text-white">CRYA</h2>
+                  <p className="text-primary-100 text-sm">Rising Youths Africa</p>
+                </div>
+              </motion.div>
+
               {/* Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
                 className="inline-flex items-center space-x-2 bg-primary-600/20 backdrop-blur-sm border border-primary-400/30 rounded-full px-4 py-2 text-primary-100"
               >
                 <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />

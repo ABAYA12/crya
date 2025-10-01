@@ -12,7 +12,7 @@ const testimonials = [
     name: 'Kwame Asante',
     role: 'Student Leader',
     institution: 'Kwabenya SHS',
-    image: '/images/testimonial-1.jpg',
+    image: '/cryalogo.jpg',
     quote: 'CRYA\'s anti-drug campaign opened my eyes to the realities of substance abuse. Their approach was respectful and informative. I now lead peer counseling in my school.',
     rating: 5,
     program: 'Anti-Drug Campaign'
@@ -22,7 +22,7 @@ const testimonials = [
     name: 'Ama Osei',
     role: 'Youth Advocate',
     institution: 'University of Ghana',
-    image: '/images/testimonial-2.jpg',
+    image: '/cryalogo.jpg',
     quote: 'The Youth & Governance program gave me the tools and confidence to speak up on issues affecting my community. I\'ve since been elected as a local assembly member.',
     rating: 5,
     program: 'Youth & Governance'
@@ -32,7 +32,7 @@ const testimonials = [
     name: 'Emmanuel Adjei',
     role: 'Program Volunteer',
     institution: 'CRYA Volunteer',
-    image: '/images/testimonial-3.jpg',
+    image: '/cryalogo.jpg',
     quote: 'Working with CRYA has been transformative. The organization truly lives up to its mission of empowering African youth. The impact we create together is remarkable.',
     rating: 5,
     program: 'Volunteer Program'
@@ -42,7 +42,7 @@ const testimonials = [
     name: 'Akosua Mensah',
     role: 'Beneficiary',
     institution: 'Achimota SHS',
-    image: '/images/testimonial-4.jpg',
+    image: '/cryalogo.jpg',
     quote: 'The mental health workshop helped me understand that it\'s okay to seek help. CRYA created a safe space where we could share our struggles and find support.',
     rating: 5,
     program: 'Mental Health Support'
@@ -52,7 +52,7 @@ const testimonials = [
     name: 'Kofi Badu',
     role: 'Community Leader',
     institution: 'Tema Community',
-    image: '/images/testimonial-5.jpg',
+    image: '/cryalogo.jpg',
     quote: 'CRYA\'s community outreach programs have brought positive change to our neighborhood. The youth are more engaged and hopeful about their future.',
     rating: 5,
     program: 'Community Outreach'

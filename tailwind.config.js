@@ -27,6 +27,7 @@ module.exports = {
           700: '#15803d',
           800: '#166534',
           900: '#14532d',
+          950: '#0f2a17',
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",

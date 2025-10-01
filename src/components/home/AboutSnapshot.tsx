@@ -137,16 +137,16 @@ export default function AboutSnapshot() {
           {/* Images */}
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="relative">
-              {/* Main Image */}
-              <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl">
+              {/* CRYA Logo */}
+              <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800 flex items-center justify-center">
                 <Image
-                  src="/images/about-main.jpg"
-                  alt="CRYA Team and Youth Empowerment"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  src="/cryalogo.jpg"
+                  alt="CRYA Logo - Rising Youths Africa"
+                  width={200}
+                  height={200}
+                  className="object-contain rounded-lg"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-600/20 to-transparent" />
               </div>
 
               {/* Floating Card */}

@@ -86,14 +86,14 @@ export default function CallToAction() {
                 <div className="hero-pattern w-full h-full opacity-20" />
               </div>
               
-              {/* Background Image */}
-              <div className="absolute inset-0 opacity-30">
+              {/* CRYA Logo Background */}
+              <div className="absolute inset-0 opacity-10 flex items-center justify-center">
                 <Image
-                  src="/images/cta-background.jpg"
-                  alt="African Youth Empowerment"
-                  fill
-                  className="object-cover"
-                  sizes="100vw"
+                  src="/cryalogo.jpg"
+                  alt="CRYA Logo"
+                  width={400}
+                  height={400}
+                  className="object-contain"
                 />
               </div>
 

@@ -82,9 +82,13 @@ export default function Footer() {
             {/* Organization Info */}
             <div className="lg:col-span-1">
               <Link href="/" className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">C</span>
-                </div>
+                <Image
+                  src="/cryalogo.jpg"
+                  alt="CRYA Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-full"
+                />
                 <div>
                   <span className="text-xl font-bold">CRYA</span>
                   <p className="text-gray-400 text-sm">Rising Youths Africa</p>

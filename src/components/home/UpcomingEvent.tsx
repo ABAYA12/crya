@@ -15,7 +15,7 @@ const upcomingEvents = [
     time: '09:00 AM',
     location: 'Accra International Conference Centre',
     category: 'Leadership',
-    image: '/images/event-summit.jpg',
+    image: '/cryalogo.jpg',
     attendees: 500,
     isFeature: true,
     registrationLink: '/events/youth-summit-2025'
@@ -28,7 +28,7 @@ const upcomingEvents = [
     time: '02:00 PM',
     location: 'University of Ghana, Legon',
     category: 'Health',
-    image: '/images/event-mental-health.jpg',
+    image: '/cryalogo.jpg',
     attendees: 200,
     isFeature: false,
     registrationLink: '/events/mental-health-workshop'
@@ -41,7 +41,7 @@ const upcomingEvents = [
     time: '06:00 PM',
     location: 'Virtual Event (Zoom)',
     category: 'Dialogue',
-    image: '/images/event-dialogue.jpg',
+    image: '/cryalogo.jpg',
     attendees: 300,
     isFeature: false,
     registrationLink: '/events/african-dream-dialogue'
@@ -250,11 +250,11 @@ export default function UpcomingEvent() {
 
                     {/* Quick Details */}
                     <div className="space-y-2 mb-4">
-                      <div className="flex items-center space-x-2 text-sm text-gray-500">
+                      <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
                         <Calendar className="w-4 h-4" />
                         <span>{formatDate(event.date)}</span>
                       </div>
-                      <div className="flex items-center space-x-2 text-sm text-gray-500">
+                      <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
                         <MapPin className="w-4 h-4" />
                         <span className="truncate">{event.location}</span>
                       </div>

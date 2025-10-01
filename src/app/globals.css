@@ -18,16 +18,24 @@
     --primary-foreground: 355.7 100% 97.3%;
     --secondary: 210 40% 98%;
     --secondary-foreground: 222.2 84% 4.9%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
+    --muted: 210 40% 94%;
+    --muted-foreground: 215.4 16.3% 35%;
+    --accent: 210 40% 94%;
     --accent-foreground: 222.2 84% 4.9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 214.3 31.8% 88%;
+    --input: 214.3 31.8% 88%;
     --ring: 142.1 76.2% 36.3%;
     --radius: 0.75rem;
+    
+    /* Improved light mode colors */
+    --text-primary: 222.2 84% 4.9%;
+    --text-secondary: 222.2 47% 11%;
+    --text-muted: 215.4 16.3% 35%;
+    --bg-subtle: 210 40% 98%;
+    --bg-muted: 210 40% 94%;
+    --border-light: 214.3 31.8% 88%;
   }
 
   .dark {
@@ -69,15 +77,15 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-md;
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-primary-600 border-2 border-primary-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+    @apply bg-white hover:bg-gray-50 text-primary-700 border-2 border-primary-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-md;
   }
   
   .btn-outline {
-    @apply bg-transparent hover:bg-primary-600 text-primary-600 hover:text-white border-2 border-primary-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    @apply bg-transparent hover:bg-primary-600 text-primary-700 hover:text-white border-2 border-primary-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300;
   }
   
   .section-padding {
@@ -94,6 +102,56 @@
   
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+  }
+  
+  /* Improved text contrast for light mode */
+  .text-primary-improved {
+    @apply text-gray-900 dark:text-white;
+  }
+  
+  .text-secondary-improved {
+    @apply text-gray-800 dark:text-gray-100;
+  }
+  
+  .text-muted-improved {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+  
+  .text-subtle-improved {
+    @apply text-gray-600 dark:text-gray-400;
+  }
+  
+  /* Better background contrasts */
+  .bg-card-improved {
+    @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm;
+  }
+  
+  .bg-muted-improved {
+    @apply bg-gray-50 dark:bg-gray-800;
+  }
+  
+  .bg-subtle-improved {
+    @apply bg-gray-100 dark:bg-gray-900;
+  }
+  
+  /* Enhanced form inputs */
+  .input-improved {
+    @apply bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500 dark:focus:border-primary-400 focus:ring-2 focus:ring-primary-500/20 dark:focus:ring-primary-400/20 transition-all duration-200;
+  }
+  
+  /* Enhanced link styles */
+  .link-primary {
+    @apply text-primary-700 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 transition-colors duration-200 underline-offset-2 hover:underline;
+  }
+  
+  /* Better borders for light mode */
+  .border-improved {
+    @apply border-gray-300 dark:border-gray-600;
+  }
+  
+  /* Enhanced focus states */
+  .focus-improved {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900;
   }
   
   .hero-pattern {

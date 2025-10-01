@@ -11,7 +11,7 @@ const newsItems = [
     id: 1,
     title: 'CRYA Launches Mental Health Initiative in 50 Senior High Schools',
     excerpt: 'Our comprehensive mental health program reaches thousands of students across Ghana, providing crucial support and resources for youth wellness.',
-    image: '/images/news-mental-health.jpg',
+    image: '/cryalogo.jpg',
     category: 'Program Launch',
     date: '2025-01-15',
     author: 'CRYA Communications Team',
@@ -23,7 +23,7 @@ const newsItems = [
     id: 2,
     title: 'Youth Leadership Summit 2025: Registration Now Open',
     excerpt: 'Join 500+ young African leaders for three days of intensive training, networking, and collaborative problem-solving.',
-    image: '/images/news-summit.jpg',
+    image: '/cryalogo.jpg',
     category: 'Events',
     date: '2025-01-10',
     author: 'Events Team',
@@ -35,7 +35,7 @@ const newsItems = [
     id: 3,
     title: 'Partnership with H&H: Expanding Anti-Drug Campaign',
     excerpt: 'Strategic partnership enables CRYA to reach more schools and communities with evidence-based drug prevention programs.',
-    image: '/images/news-partnership.jpg',
+    image: '/cryalogo.jpg',
     category: 'Partnerships',
     date: '2025-01-05',
     author: 'Partnership Team',
@@ -47,7 +47,7 @@ const newsItems = [
     id: 4,
     title: 'Impact Report 2024: 15,000 Lives Transformed',
     excerpt: 'Our annual report showcases the incredible impact of CRYA programs across Ghana and the broader African continent.',
-    image: '/images/news-impact-report.jpg',
+    image: '/cryalogo.jpg',
     category: 'Reports',
     date: '2024-12-20',
     author: 'Research Team',
@@ -178,7 +178,7 @@ export default function NewsUpdates() {
                     </p>
 
                     {/* Meta Info */}
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-8">
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-8">
                       <div className="flex items-center space-x-2">
                         <Calendar className="w-4 h-4" />
                         <span>{formatDate(featuredNews.date)}</span>
@@ -251,7 +251,7 @@ export default function NewsUpdates() {
                     </p>
 
                     {/* Meta Info */}
-                    <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
+                    <div className="flex items-center justify-between text-xs text-gray-600 dark:text-gray-400 mb-4">
                       <div className="flex items-center space-x-1">
                         <Calendar className="w-3 h-3" />
                         <span>{formatDate(news.date)}</span>

@@ -96,9 +96,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-bold text-xl">C</span>
-              <div className="absolute inset-0 bg-primary-400 rounded-full animate-ping opacity-20"></div>
+            <div className="relative group-hover:scale-110 transition-transform duration-300">
+              <Image
+                src="/cryalogo.jpg"
+                alt="CRYA Logo"
+                width={48}
+                height={48}
+                className="rounded-full border-2 border-primary-200 dark:border-primary-800"
+              />
+              <div className="absolute inset-0 bg-primary-400/20 rounded-full animate-ping opacity-30"></div>
             </div>
             <div className="hidden md:block">
               <span className="text-xl font-bold text-gray-900 dark:text-white">
@@ -117,7 +123,7 @@ export default function Navbar() {
                 {item.submenu ? (
                   <>
                     <button
-                      className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200"
+                      className="flex items-center space-x-1 text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 font-medium transition-colors duration-200"
                       onMouseEnter={() => setActiveDropdown(item.name)}
                     >
                       <span>{item.name}</span>
@@ -137,7 +143,7 @@ export default function Navbar() {
                             <Link
                               key={subitem.name}
                               href={subitem.href}
-                              className="block px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+                              className="block px-4 py-3 text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
                             >
                               {subitem.name}
                             </Link>
@@ -149,7 +155,7 @@ export default function Navbar() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200"
+                    className="text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 font-medium transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
@@ -170,7 +176,7 @@ export default function Navbar() {
                 {theme === 'dark' ? (
                   <Sun className="w-5 h-5 text-yellow-500" />
                 ) : (
-                  <Moon className="w-5 h-5 text-gray-700" />
+                  <Moon className="w-5 h-5 text-gray-800" />
                 )}
               </button>
             )}
@@ -191,9 +197,9 @@ export default function Navbar() {
               aria-label="Toggle menu"
             >
               {isOpen ? (
-                <X className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+                <X className="w-6 h-6 text-gray-800 dark:text-gray-200" />
               ) : (
-                <Menu className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+                <Menu className="w-6 h-6 text-gray-800 dark:text-gray-200" />
               )}
             </button>
           </div>
@@ -216,7 +222,7 @@ export default function Navbar() {
                       <>
                         <button
                           onClick={() => toggleDropdown(item.name)}
-                          className="flex items-center justify-between w-full px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium"
+                          className="flex items-center justify-between w-full px-4 py-3 text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 font-medium"
                         >
                           <span>{item.name}</span>
                           <ChevronDown
@@ -237,7 +243,7 @@ export default function Navbar() {
                                 <Link
                                   key={subitem.name}
                                   href={subitem.href}
-                                  className="block px-8 py-3 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400"
+                                  className="block px-8 py-3 text-gray-700 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-400"
                                   onClick={() => setIsOpen(false)}
                                 >
                                   {subitem.name}
@@ -250,7 +256,7 @@ export default function Navbar() {
                     ) : (
                       <Link
                         href={item.href}
-                        className="block px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium"
+                        className="block px-4 py-3 text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 font-medium"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.name}

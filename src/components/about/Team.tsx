@@ -17,7 +17,7 @@ export default function Team() {
 
           {/* Placeholder for team members */}
           <div className="bg-white rounded-2xl p-12 border-2 border-dashed border-gray-300">
-            <div className="text-gray-500 text-center">
+            <div className="text-gray-600 dark:text-gray-400 text-center">
               <div className="text-6xl mb-4">👥</div>
               <h3 className="text-xl font-semibold mb-2">Team Profiles Coming Soon</h3>
               <p className="max-w-md mx-auto">
